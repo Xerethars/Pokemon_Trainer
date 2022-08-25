@@ -8,6 +8,7 @@ import { PokemonWrapperComponent } from './components/general/pokemon-wrapper/po
 import { PokemonImageComponent } from './components/general/pokemon-image/pokemon-image.component';
 import { PokemonDetailsComponent } from './components/general/pokemon-details/pokemon-details.component';
 import { LandingPage } from './pages/landing/landing.page';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LandingPage } from './pages/landing/landing.page';
     LandingPage
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
