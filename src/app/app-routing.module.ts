@@ -5,7 +5,12 @@ import { LandingPage } from "./pages/landing/landing.page";
 const routes: Routes = [
     {
         path: "",
-        component: LandingPage,
+        pathMatch: "full",
+        redirectTo: "/login"
+    },
+    {
+        path: "login",
+        component: LandingPage
     },
 ];
 
