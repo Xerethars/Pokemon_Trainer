@@ -9,6 +9,8 @@ import { PokemonImageComponent } from './components/general/pokemon-image/pokemo
 import { PokemonDetailsComponent } from './components/general/pokemon-details/pokemon-details.component';
 import { LandingPage } from './pages/landing/landing.page';
 import { AppRoutingModule } from './app-routing.module';
+import { HeaderComponent } from './components/general/header/header.component';
+import { AppContainerComponent } from './components/hoc/app-container/app-container.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { AppRoutingModule } from './app-routing.module';
     PokemonWrapperComponent,
     PokemonImageComponent,
     PokemonDetailsComponent,
-    LandingPage
+    LandingPage,
+    HeaderComponent,
+    AppContainerComponent
   ],
   imports: [
     BrowserModule,
