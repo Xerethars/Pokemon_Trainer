@@ -1,0 +1,17 @@
+
+.pokemon-list-div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 94%;
+    padding-top: 20%;
+
+}
+
+.pokemon-list-element {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2%;
+    width: 100%;
+}
