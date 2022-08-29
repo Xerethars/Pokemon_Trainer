@@ -37,10 +37,23 @@
 }
 
 .formWrapper button {
-    width: 5%;
-    margin-right: 2%;
+    width: 15%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
 }
 
 .formWrapper input:focus {
     outline: none;
+}
+
+.formWrapper button img {
+    width: 70%;
+    height: 70%;
+    margin: auto;
 }
