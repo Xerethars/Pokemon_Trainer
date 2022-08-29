@@ -1,0 +1,37 @@
+@import url(//db.onlinewebfonts.com/c/89d11a443c316da80dcb8f5e1f63c86e?family=Bauhaus+93);
+
+.headerImage {
+    height: 80%;
+    margin-right: 2%;
+}
+
+.headerWrapper {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
+
+.titleGrid {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: auto;
+    grid-template-areas: ". title pika";
+}
+
+.titleGrid h1 {
+    grid-area: title;
+    margin: auto;
+    font-size: 3.5rem;
+}
+
+.titleImage {
+    margin-top: 5%;
+    width: 100%;
+    grid-area: pika;
+}
+
+header {
+    font-family: "Bauhaus 93";
+    margin-bottom: 2%;
+}
+
