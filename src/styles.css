@@ -5,9 +5,9 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     background: linear-gradient(to bottom,
-        lightcoral 0,
-        lightcoral 5vh,
-        antiquewhite 5vh
+        #f5907e 0,
+        #f5907e 5vh,
+        #fff4d4 5vh
     );
 }
 
