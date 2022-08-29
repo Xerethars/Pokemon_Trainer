@@ -1,0 +1,59 @@
+
+.flexWrapper {
+    display: flex;
+    height: 15vh;
+    align-items: center;
+}
+
+.flexWrapper img {
+    height: 80%;
+    margin-left: 20%;
+}
+
+.flexWrapper form {
+    margin-left: 5%;
+    width: 35%;
+}
+
+.formWrapper {
+    width: 98%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    border: 0.5vh solid lightgray;
+    border-radius: 2em;
+    background-color: white;
+    justify-content: space-between;
+}
+
+.formWrapper input {
+    width: 85%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 2%;
+    border: none;
+    background: none;
+    font-size: 1.3rem;
+}
+
+.formWrapper button {
+    width: 15%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.formWrapper input:focus {
+    outline: none;
+}
+
+.formWrapper button img {
+    width: 70%;
+    height: 70%;
+    margin: auto;
+}
