@@ -10,7 +10,6 @@ import { PokemonDetailsComponent } from './components/general/pokemon-details/po
 import { LandingPage } from './pages/landing/landing.page';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './components/general/header/header.component';
-import { AppContainerComponent } from './components/hoc/app-container/app-container.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,6 @@ import { AppContainerComponent } from './components/hoc/app-container/app-contai
     PokemonDetailsComponent,
     LandingPage,
     HeaderComponent,
-    AppContainerComponent
   ],
   imports: [
     BrowserModule,
