@@ -7,9 +7,14 @@ import { PokemonListComponent } from './components/general/pokemon-list/pokemon-
 import { PokemonWrapperComponent } from './components/general/pokemon-wrapper/pokemon-wrapper.component';
 import { PokemonImageComponent } from './components/general/pokemon-image/pokemon-image.component';
 import { PokemonDetailsComponent } from './components/general/pokemon-details/pokemon-details.component';
+
+import { TrainerPagePage } from './pages/trainer-page/trainer-page.page';
+import { HttpClientModule } from '@angular/common/http';
+
 import { LandingPage } from './pages/landing/landing.page';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './components/general/header/header.component';
+
 
 @NgModule({
   declarations: [
@@ -21,10 +26,12 @@ import { HeaderComponent } from './components/general/header/header.component';
     PokemonDetailsComponent,
     LandingPage,
     HeaderComponent,
+    TrainerPagePage,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
