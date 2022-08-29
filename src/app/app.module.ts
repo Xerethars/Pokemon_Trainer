@@ -8,6 +8,7 @@ import { PokemonWrapperComponent } from './components/general/pokemon-wrapper/po
 import { PokemonImageComponent } from './components/general/pokemon-image/pokemon-image.component';
 import { PokemonDetailsComponent } from './components/general/pokemon-details/pokemon-details.component';
 import { TrainerPagePage } from './pages/trainer-page/trainer-page.page';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { TrainerPagePage } from './pages/trainer-page/trainer-page.page';
     TrainerPagePage
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
