@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 import { genRandomId } from 'src/app/utils/randomPokeId';
 
 @Component({
@@ -10,14 +11,18 @@ export class LandingPage implements OnInit {
 
   public idArray: number[] | undefined;
 
-  constructor() { }
+  get username(): string | null {
+    return this.authService.getUsername();
+  }
+
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
     this.idArray = genRandomId(3, 898);
   }
 
   public loginUser(username: string) {
-    console.log(username); 
+    this.authService.login(username);
   }
 
 }

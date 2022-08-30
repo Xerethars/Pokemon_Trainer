@@ -15,6 +15,7 @@ import { LandingPage } from './pages/landing/landing.page';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './components/general/header/header.component';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from './services/auth.service';
 
 
 @NgModule({
@@ -35,7 +36,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
