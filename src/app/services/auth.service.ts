@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
-
-const { trainerAPI } = environment;
+import { TrainerService } from './trainer.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +8,7 @@ export class AuthService {
 
   private username: string | null = localStorage.getItem("username");
 
-  constructor() { }
+  constructor(private trainerService: TrainerService) { }
 
   public login(username: string) {
     this.username = username;
@@ -22,3 +20,4 @@ export class AuthService {
     return this.username;
   }
 }
+
