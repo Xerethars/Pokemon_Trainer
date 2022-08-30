@@ -1,6 +1,4 @@
 <app-input-field></app-input-field>
-<div class="flexWrapper">
-    <app-pokemon-image></app-pokemon-image>
-    <app-pokemon-image></app-pokemon-image>
-    <app-pokemon-image></app-pokemon-image>
+<div *ngIf="idArray" class="flexWrapper">
+    <app-pokemon-image *ngFor="let id of idArray" [id]="id"></app-pokemon-image>
 </div>

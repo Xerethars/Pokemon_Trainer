@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-pokemon-image',
@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PokemonImageComponent implements OnInit {
 
+  @Input() id: number = 0;
+
+  private URL: string = "";
+
   constructor() { }
 
   ngOnInit(): void {
+    this.URL = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.id}.png`
+    console.log(this.URL);
+    
+  }
+
+  public getUrl() {
+    return this.URL;
   }
 
 }
