@@ -1,4 +1,4 @@
-<app-input-field></app-input-field>
+<app-input-field (newInputEvent)="loginUser($event)"></app-input-field>
 <div *ngIf="idArray" class="flexWrapper">
     <app-pokemon-image *ngFor="let id of idArray" [id]="id"></app-pokemon-image>
 </div>

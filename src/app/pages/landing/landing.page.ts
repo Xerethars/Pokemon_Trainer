@@ -16,4 +16,8 @@ export class LandingPage implements OnInit {
     this.idArray = genRandomId(3, 898);
   }
 
+  public loginUser(username: string) {
+    console.log(username); 
+  }
+
 }

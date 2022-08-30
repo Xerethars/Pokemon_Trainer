@@ -1,9 +1,9 @@
 <div class="flexWrapper">
     <img src="/assets/POKEBALL.png" alt="Pokeball" />
 
-    <form>
+    <form (ngSubmit)="notifySubmitClick(newInput.value)">
         <div class="formWrapper">
-            <input type="text" minlength="2" required placeholder="What is your name" />
+            <input type="text" minlength="2" required placeholder="What is your name" #newInput/>
             <button type="submit"><img src="/assets/arrow.png" alt="Submit Arrow" /></button>
         </div>
     </form>

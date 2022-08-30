@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LandingPage } from './pages/landing/landing.page';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './components/general/header/header.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { HeaderComponent } from './components/general/header/header.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
