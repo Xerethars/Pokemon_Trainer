@@ -1,4 +1,4 @@
-<div class="imageWrapper">
-    <img src="{{getUrl()}}" alt="Pokemon image"/>
+<div *ngIf="pokemon" class="imageWrapper">
+    <img [src]="pokemon.image" />
 </div>
 

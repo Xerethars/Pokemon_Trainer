@@ -2,16 +2,16 @@
 .pokemon-list-div {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    width: 94%;
-    padding-top: 20%;
-
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .pokemon-list-element {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 2%;
+    padding: 0%;
     width: 100%;
+    margin-bottom: 2%;
 }

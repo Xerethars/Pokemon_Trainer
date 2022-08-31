@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { finalize } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
-const URL = "https://ml-noroff-assignment.herokuapp.com/trainers";
+const { trainerAPI } = environment;
+
 
 @Injectable({
   providedIn: 'root'
@@ -30,4 +31,5 @@ export class TrainerService {
     });
     return true;
   }
+
 }
