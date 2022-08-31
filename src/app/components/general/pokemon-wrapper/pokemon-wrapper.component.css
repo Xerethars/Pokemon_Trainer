@@ -1,14 +1,17 @@
-
+:host {
+    width: 30%;
+}
 
 .pokemon-wrapper-div {
     display: flex;
     flex-direction: row;
     background-color: rgb(233, 236, 164);
-    flex: 30%;
-    width: 350px;
-    height: 250px;
     border: 2px solid black;
     justify-content: space-around;
     align-items: center;
+    width: 20rem;
+    margin-bottom: 2%;
+    height: 10rem;
+
 }
 

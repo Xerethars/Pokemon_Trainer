@@ -1,8 +1,5 @@
 
 .pokemon-detail-div {
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
     padding: 2%;
-    height: 200px;
+    height: 100%;
 }
