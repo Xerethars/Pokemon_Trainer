@@ -1,8 +1,9 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { finalize } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
-const { trainerAPI } = environment;
+const { trainerAPI, APIKey } = environment;
 
 
 @Injectable({
@@ -13,9 +14,9 @@ export class TrainerService {
 
   constructor(private http: HttpClient) { }
 
-  public fetchTrainer(trainerId: number) {
+  public fetchTrainer(trainerId: string) {
     this.loading = true;
-    return this.http.get(URL+"/"+ trainerId)
+    return this.http.get(trainerAPI +"?username="+ trainerId)
       .pipe(
         finalize(() => {
           this.loading = false;
@@ -23,13 +24,16 @@ export class TrainerService {
       );
   }
 
-  public checkIfTrainerExists(username): boolean {
-    this.fetchTrainer(username).subscribe({
-      next: () => {
-
-      }
-    });
-    return true;
+  public postNewUser(username: string): void {
+    this.http.post(trainerAPI, JSON.stringify({
+      username: username,
+      pokemon: [],
+    }), {
+      "headers" : {
+        'X-API-Key' : APIKey,
+        "Content-Type" : "application/json"
+      },
+    }).subscribe();
   }
 
 }

@@ -14,12 +14,24 @@ export class AuthService {
 
   constructor(private trainerService: TrainerService) { }
 
-  public login(username: string) {
-    this.username = username;
-    localStorage.setItem("username", username);
+  public login(username: string): void {
+    this.trainerService.fetchTrainer(username)
+      .subscribe({
+        next: (data) => {
+          const userArray = data as Array<Object>
+
+          this.username = username;
+          localStorage.setItem("username", username);
+
+          if(userArray.length < 1) this.trainerService.postNewUser(username); 
+        },
+        error: (err) => {
+          alert("Something went wrong: " + err);
+        }
+      });
   }
 
-  public getUsername() {
+  public getUsername(): string | null {
     return this.username;
   }
 }
