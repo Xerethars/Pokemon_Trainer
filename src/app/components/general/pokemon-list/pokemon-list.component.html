@@ -1,32 +1,6 @@
 <div class="pokemon-list-div">
-    <div class="pokemon-list-element">
-        <app-pokemon-wrapper></app-pokemon-wrapper>
-        <app-pokemon-wrapper></app-pokemon-wrapper>
-        <app-pokemon-wrapper></app-pokemon-wrapper>
-    </div>
-    <div class="pokemon-list-element">
-        <app-pokemon-wrapper></app-pokemon-wrapper>
-        <app-pokemon-wrapper></app-pokemon-wrapper>
-        <app-pokemon-wrapper></app-pokemon-wrapper>
-    </div>
-    <div class="pokemon-list-element">
-        <app-pokemon-wrapper></app-pokemon-wrapper>
-        <app-pokemon-wrapper></app-pokemon-wrapper>
-        <app-pokemon-wrapper></app-pokemon-wrapper>
-    </div>
-    <div class="pokemon-list-element">
-        <app-pokemon-wrapper></app-pokemon-wrapper>
-        <app-pokemon-wrapper></app-pokemon-wrapper>
-        <app-pokemon-wrapper></app-pokemon-wrapper>
-    </div>
-    <div class="pokemon-list-element">
-        <app-pokemon-wrapper></app-pokemon-wrapper>
-        <app-pokemon-wrapper></app-pokemon-wrapper>
-        <app-pokemon-wrapper></app-pokemon-wrapper>
-    </div>
-    <div class="pokemon-list-element">
-        <app-pokemon-wrapper></app-pokemon-wrapper>
-        <app-pokemon-wrapper></app-pokemon-wrapper>
-        <app-pokemon-wrapper></app-pokemon-wrapper>
-    </div>
+        <div *ngFor="let poke of pokemon; let i = index">
+            <app-pokemon-wrapper [pokemon]="poke"></app-pokemon-wrapper>
+        </div>
+
 </div>

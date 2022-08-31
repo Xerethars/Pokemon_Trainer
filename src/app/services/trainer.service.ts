@@ -1,8 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { finalize } from 'rxjs';
+import { map, Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { Trainer } from '../models/trainer.model';
 
-const URL = "https://ml-noroff-assignment.herokuapp.com/trainers";
+const { trainerAPI } = environment;
+
 
 @Injectable({
   providedIn: 'root'
@@ -12,13 +15,11 @@ export class TrainerService {
 
   constructor(private http: HttpClient) { }
 
-  public fetchTrainer(trainerId: number): void {
-    this.http.get(URL+"/"+ trainerId)
+  public fetchTrainer(username: string): Observable<Trainer | undefined> {
+    return this.http.get<Trainer[]>(`${trainerAPI}?username=${username}`)
       .pipe(
-        finalize(() => this.loading = false)
+        map((trainer: Trainer[]) => trainer.pop())
       )
-      .subscribe((response => {
-         
-      }))
   }
+
 }

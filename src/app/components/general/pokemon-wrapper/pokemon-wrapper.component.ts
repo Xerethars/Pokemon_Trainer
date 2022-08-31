@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Pokemon } from 'src/app/models/pokemon.model';
 
 @Component({
   selector: 'app-pokemon-wrapper',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pokemon-wrapper.component.css']
 })
 export class PokemonWrapperComponent implements OnInit {
+
+  @Input() pokemon: Pokemon | undefined;
 
   constructor() { }
 
