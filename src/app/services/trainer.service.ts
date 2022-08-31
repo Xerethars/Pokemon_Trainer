@@ -12,13 +12,22 @@ export class TrainerService {
 
   constructor(private http: HttpClient) { }
 
-  public fetchTrainer(trainerId: number): void {
-    this.http.get(URL+"/"+ trainerId)
+  public fetchTrainer(trainerId: number) {
+    this.loading = true;
+    return this.http.get(URL+"/"+ trainerId)
       .pipe(
-        finalize(() => this.loading = false)
-      )
-      .subscribe((response => {
-         
-      }))
+        finalize(() => {
+          this.loading = false;
+        })
+      );
+  }
+
+  public checkIfTrainerExists(username): boolean {
+    this.fetchTrainer(username).subscribe({
+      next: () => {
+
+      }
+    });
+    return true;
   }
 }
