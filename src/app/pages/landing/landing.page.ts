@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { genRandomId } from 'src/app/utils/randomPokeId';
 
@@ -15,7 +16,8 @@ export class LandingPage implements OnInit {
     return this.authService.getUsername();
   }
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.idArray = genRandomId(3, 898);
@@ -23,6 +25,7 @@ export class LandingPage implements OnInit {
 
   public loginUser(username: string) {
     this.authService.login(username);
+    this.router.navigate(["/trainer"]);
   }
 
 }
