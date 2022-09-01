@@ -1,8 +1,18 @@
 .imageWrapper {
+    width: 10rem;
+    height: 10rem;
     margin: auto;
 }
 .imageWrapper img {
     width: 10rem;
     height: 10rem;
+    margin-top: 2%;
 }
+
+.backgroundImg {   
+    background-image: url(../../../../assets/POKEBALL.png);
+    background-size: 10rem 10rem;
+}
+
+
 

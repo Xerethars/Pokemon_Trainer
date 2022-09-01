@@ -16,6 +16,7 @@ import { HeaderComponent } from './components/general/header/header.component';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from './services/auth.service';
 import { TrainerPage } from './pages/trainer/trainer.page';
+import { CatalogPage } from './pages/catalog/catalog.page';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { TrainerPage } from './pages/trainer/trainer.page';
     LandingPage,
     HeaderComponent,
     TrainerPage,
+    CatalogPage,
   ],
   imports: [
     BrowserModule,

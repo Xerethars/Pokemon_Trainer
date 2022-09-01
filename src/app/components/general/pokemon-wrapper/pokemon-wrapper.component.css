@@ -4,14 +4,19 @@
 
 .pokemon-wrapper-div {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: rgb(233, 236, 164);
     border: 2px solid black;
-    justify-content: space-around;
     align-items: center;
-    width: 20rem;
-    margin-bottom: 2%;
-    height: 10rem;
+    width: 15rem;
+    margin-bottom: 4%;
+    height: 15rem;
 
+}
+
+.wrapper-image {
+    opacity: 30%;
+    width: 5rem;
+    height: 5rem;
 }
 
