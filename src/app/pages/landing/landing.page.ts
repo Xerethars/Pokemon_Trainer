@@ -16,16 +16,15 @@ export class LandingPage implements OnInit {
     return this.authService.getUsername();
   }
 
-  constructor(private authService: AuthService,
-    private router: Router) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
     this.idArray = genRandomId(3, 898);
+    if(this.authService.isLoggedIn()) this.router.navigate(["/trainer"]);
   }
 
   public loginUser(username: string) {
     this.authService.login(username);
-    this.router.navigate(["/trainer"]);
   }
 
 }

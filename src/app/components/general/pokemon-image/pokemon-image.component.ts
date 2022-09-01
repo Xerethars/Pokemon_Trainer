@@ -18,7 +18,6 @@ export class PokemonImageComponent implements OnInit {
 
   ngOnInit(): void {
     this.URL = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.id}.png`
-    console.log(this.URL);
   }
 
   public getUrl() {
