@@ -1,10 +1,9 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { finalize } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Trainer } from '../models/trainer.model';
 
-const { trainerAPI } = environment;
+const { trainerAPI, APIKey } = environment;
 
 
 @Injectable({
@@ -15,11 +14,26 @@ export class TrainerService {
 
   constructor(private http: HttpClient) { }
 
-  public fetchTrainer(username: string): Observable<Trainer | undefined> {
-    return this.http.get<Trainer[]>(`${trainerAPI}?username=${username}`)
+  public fetchTrainer(trainerId: string) {
+    this.loading = true;
+    return this.http.get(trainerAPI +"?username="+ trainerId)
       .pipe(
-        map((trainer: Trainer[]) => trainer.pop())
-      )
+        finalize(() => {
+          this.loading = false;
+        })
+      );
+  }
+
+  public postNewUser(username: string): void {
+    this.http.post(trainerAPI, JSON.stringify({
+      username: username,
+      pokemon: [],
+    }), {
+      "headers" : {
+        'X-API-Key' : APIKey,
+        "Content-Type" : "application/json"
+      },
+    }).subscribe();
   }
 
 }

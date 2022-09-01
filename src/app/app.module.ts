@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { LandingPage } from './pages/landing/landing.page';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './components/general/header/header.component';
+import { FormsModule } from '@angular/forms';
+import { AuthService } from './services/auth.service';
 import { TrainerPage } from './pages/trainer/trainer.page';
 
 
@@ -32,8 +34,9 @@ import { TrainerPage } from './pages/trainer/trainer.page';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

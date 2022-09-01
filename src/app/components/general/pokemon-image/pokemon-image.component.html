@@ -1,4 +1,4 @@
-<div *ngIf="pokemon" class="imageWrapper">
-    <img [src]="pokemon.image" />
+<div *ngIf="pokemon || id" class="imageWrapper">
+    <img [src]="pokemon?.image || getUrl()" />
 </div>
 
