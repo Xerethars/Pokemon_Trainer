@@ -3,6 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { CatalogPage } from "./pages/catalog/catalog.page";
 import { LandingPage } from "./pages/landing/landing.page";
 import { TrainerPage } from "./pages/trainer/trainer.page";
+import { GuardService } from "./services/guard.service";
 
 
 const routes: Routes = [
@@ -13,11 +14,12 @@ const routes: Routes = [
     },
     {
         path: "login",
-        component: LandingPage
+        component: LandingPage,
     },
     {
         path: "trainer",
         component: TrainerPage,
+        canActivate: [GuardService],
     },
     {
         path: "catalog",
