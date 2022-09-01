@@ -1,14 +1,18 @@
 @import url(//db.onlinewebfonts.com/c/89d11a443c316da80dcb8f5e1f63c86e?family=Bauhaus+93);
 
 .headerImage {
-    height: 80%;
-    margin-right: 2%;
+    height: 100%;
 }
 
 .headerWrapper {
     height: 5vh;
     display: flex;
     align-items: center;
+}
+
+.headerWrapper a {
+    height: 80%;
+    margin-right: 2%;
 }
 
 .titleGrid {
