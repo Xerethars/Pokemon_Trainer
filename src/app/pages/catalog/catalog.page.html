@@ -1,0 +1,5 @@
+<div>
+    <p *ngIf="loading">Loading pokemon ...</p>
+    <app-pokemon-list [pokemon]="pokemon"></app-pokemon-list>
+    <button type="button" (click)="onNextPokemonClick()">Next</button>
+</div>

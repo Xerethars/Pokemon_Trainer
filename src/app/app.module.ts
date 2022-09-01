@@ -14,6 +14,7 @@ import { LandingPage } from './pages/landing/landing.page';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './components/general/header/header.component';
 import { TrainerPage } from './pages/trainer/trainer.page';
+import { CatalogPage } from './pages/catalog/catalog.page';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { TrainerPage } from './pages/trainer/trainer.page';
     LandingPage,
     HeaderComponent,
     TrainerPage,
+    CatalogPage,
   ],
   imports: [
     BrowserModule,

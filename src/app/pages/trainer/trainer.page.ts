@@ -14,10 +14,22 @@ export class TrainerPage implements OnInit {
 
   public error: string = "";
 
-  constructor(private pokemonService: PokemonService) {}
+  constructor(private pokemonService: PokemonService, private trainerService: TrainerService) {}
+
+  public trainer: Trainer = {
+    id: 1,
+    username: "ash",
+    pokemon: ["bulbasaur", "kakuna", "rattata", "toxapex"],
+  };
+
+  getCaughtPokemon(pokemon: Pokemon[], trainer: Trainer): Pokemon[] {
+    return pokemon.filter((poke) => {
+      return trainer.pokemon.indexOf(poke.name) != -1
+    });
+  };
 
   get pokemon(): Pokemon[] {
-    return this.pokemonService.pokemon;
+    return this.getCaughtPokemon(this.pokemonService.pokemon, this.trainer);
   }
 
   get loading(): boolean {
@@ -29,3 +41,4 @@ export class TrainerPage implements OnInit {
     this.pokemonService.fetchPokemon();
   }
 }
+

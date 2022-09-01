@@ -15,4 +15,9 @@ export class PokemonWrapperComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // Check if pokemon is in trainer 
+  
+
+
+
 }
