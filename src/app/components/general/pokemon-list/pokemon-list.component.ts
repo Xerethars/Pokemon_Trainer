@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Pokemon } from 'src/app/models/pokemon.model';
-import { environment } from 'src/environments/environment';
+import { Trainer } from 'src/app/models/trainer.model';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -12,8 +12,9 @@ export class PokemonListComponent implements OnInit {
   constructor() { }
 
   @Input() pokemon: Pokemon[] | null = [];
-
-  
+  @Input() trainer: Trainer | undefined;
+  @Input() fromTrainerPage: boolean| undefined;
+  @Output() trainerChange = new EventEmitter<Trainer>()
 
   ngOnInit(): void {
   }

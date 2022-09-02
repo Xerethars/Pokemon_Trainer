@@ -1,6 +1,5 @@
 <div class="pokemon-list-div">
         <div *ngFor="let poke of pokemon; let i = index">
-            <app-pokemon-wrapper [pokemon]="poke"></app-pokemon-wrapper>
+            <app-pokemon-wrapper [pokemon]="poke" [(trainer)]="trainer" [fromTrainerPage]="fromTrainerPage"></app-pokemon-wrapper>
         </div>
-
 </div>

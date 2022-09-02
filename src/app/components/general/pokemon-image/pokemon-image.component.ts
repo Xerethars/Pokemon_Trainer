@@ -9,6 +9,7 @@ import { Pokemon } from 'src/app/models/pokemon.model';
 export class PokemonImageComponent implements OnInit {
 
   @Input() id: number = 0;
+  @Input() isAdded: boolean | undefined;
 
   private URL: string = "";
 
@@ -17,7 +18,7 @@ export class PokemonImageComponent implements OnInit {
   @Input() pokemon: Pokemon | undefined;
 
   ngOnInit(): void {
-    this.URL = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.id}.png`
+    this.URL = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.id}.png`    
   }
 
   public getUrl() {
