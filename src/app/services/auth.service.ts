@@ -41,5 +41,11 @@ export class AuthService {
   public isLoggedIn(): boolean {
     return (this.getUsername() !== null && this.getUsername() !== "");
   }
+
+  public logout(): void {
+    this.username = null;
+    localStorage.clear();
+    this.router.navigate(["/login"]);
+  }
 }
 

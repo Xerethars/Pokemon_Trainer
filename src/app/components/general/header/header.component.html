@@ -12,7 +12,7 @@
         <div>
             <div *ngIf="isLoggedIn">
                 <p>{{username}}</p>
-                <button type="button">Logout</button>
+                <button type="button" (click)="logout()">Logout</button>
             </div>
         </div>
     </div>

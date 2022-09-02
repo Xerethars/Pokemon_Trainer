@@ -14,6 +14,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public logout(): void {
+    this.authService.logout();
+  }
+
   public getPath() {
     const path = this.router.url;
 
@@ -27,5 +31,4 @@ export class HeaderComponent implements OnInit {
   get username(): string | null {
     return this.authService.getUsername();
   }
-
 }
