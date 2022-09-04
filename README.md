@@ -1,27 +1,50 @@
-# PokemonTrainer
+# pokemon-trainer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
-## Development server
+Angular Typescript project delivery repository for the assignment 3 module at Noroff. It reproduces the functionality requested in the assignment 3 file.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+In this project, the user is presented with the possibility to log into a trainer page service. Only the username is required in order to login. Once the user is logged in, a new or an existing user information is fetched and the user is redirected to a trainer page where all his pokemon are shown. Clicking any pokemon items result in the pokemon being deleted from the users caught pokemon inventory. Trainer page is also accessible by pressing the pokeball image placed in the page header as long as the user is logged in.
 
-## Code scaffolding
+The user is also able to navigate to a Catalog page by clicking the pokedex image placed in the header of the page. The user is then taken to a long list of all existing pokemon. The list shows only a few rows of pokemon at a time and the user is required to use the "Next" button to show more pokemon. Any pokemon can be added to the users caught pokemon inventory visible in the trainer page by clicking the corresponding pokemon image found in the catalog page.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Table of Contents
 
-## Build
+- [Background](#background)
+- [Install](#install)
+- [Usage](#usage)
+- [Maintainers](#maintainers)
+- [License](#license)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Background
 
-## Running unit tests
+The background for this project was a mandatory assignment at Noroff Accelerate.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Install
 
-## Running end-to-end tests
+Download the project and execute the following command in the root of the project.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```
+npm install
+```
 
-## Further help
+## Usage
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+In the root project execute the following command.
+
+```
+ng serve
+```
+
+### Dependencies
+
+Angular CLI
+
+## Maintainers
+
+[@Xerethars](https://github.com/Xerethars)
+[@MagnusLeira](https://github.com/h578031)
+
+## License
+
+UNLICENSED 2022 Magnus Leira, Michal Kowalski
