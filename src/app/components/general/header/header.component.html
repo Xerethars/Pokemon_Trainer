@@ -1,12 +1,21 @@
 <header>
-    <nav>
-        <div class="headerWrapper">
-            <a routerLink="/trainer" routerLinkActive="active"><img class="headerImage" src="/assets/POKEBALL.png"
-                    alt="pokeball" /></a>
-            <a routerLink="/catalog" routerLinkActive="active"><img class="headerImage" src="/assets/pokedex.png"
-                    alt="pokedex" /></a>
+    <div class="headerGrid">
+        <nav>
+            <div class="headerWrapper">
+                <a routerLink="/trainer" routerLinkActive="active"><img class="headerImage" src="/assets/POKEBALL.png"
+                        alt="pokeball" /></a>
+                <a routerLink="/catalog" routerLinkActive="active"><img class="headerImage" src="/assets/pokedex.png"
+                        alt="pokedex" /></a>
+            </div>
+        </nav>
+        <h2>{{getPath()}}</h2>
+        <div>
+            <div *ngIf="isLoggedIn">
+                <p>{{username}}</p>
+                <button type="button" (click)="logout()">Logout</button>
+            </div>
         </div>
-    </nav>
+    </div>
     <div class="titleWrapper">
         <div class="titleGrid">
             <h1>Pokemon Trainer</h1>
