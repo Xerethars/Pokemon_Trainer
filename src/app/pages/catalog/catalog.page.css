@@ -1,0 +1,18 @@
+.nextWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2vh;
+    height: 7vh;
+}
+
+.nextWrapper button {
+    height: 100%;
+    width: 15%;
+    font-size: 1.5rem;
+    background-color: rgb(236, 220, 164);
+    border: 0.3vh solid rgb(223, 198, 55);
+    border-radius: 1.5vh;
+    box-shadow: 0.4vh 0.4vh 0.4vh 0.4vh rgb(137, 135, 66);
+    outline: none;
+}

@@ -39,3 +39,35 @@ header {
     margin-bottom: 2%;
 }
 
+.headerGrid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.headerGrid h2 {
+    margin: 0;
+    justify-self: center;
+}
+
+.headerGrid div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    justify-self: end;
+}
+
+.headerGrid div * {
+    margin: 0;
+}
+
+.headerGrid div div p {
+    margin-right: 10%;
+}
+
+.headerGrid div div button {
+    height: 3vh;
+    background-color: rgba(149, 26, 26, 0.495);
+    border: 0.2vh solid black;
+    font-size: 1rem;
+}
