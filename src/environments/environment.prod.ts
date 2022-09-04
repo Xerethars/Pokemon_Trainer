@@ -1,5 +1,5 @@
 export const environment = {
-  production: true,
-  trainerAPI: "https://ml-noroff-assignment.herokuapp.com/trainers",
+  trainerAPI: "https://noroff-assignment-api-michalk.herokuapp.com/trainers",
   pokemonAPI: "https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0",
+  APIKey: "123321",
 };
