@@ -1,6 +1,6 @@
 <div>
     <p *ngIf="loading">Loading pokemon ...</p>
-    <app-pokemon-list [pokemon]="pokemon"></app-pokemon-list>
+    <app-pokemon-list [pokemon]="pokemon" [(trainer)]="trainer" [fromTrainerPage]="fromTrainerPage"></app-pokemon-list>
     <div class="nextWrapper">
         <button type="button" (click)="onNextPokemonClick()">Next</button>
     </div>

@@ -13,11 +13,24 @@ export class CatalogPage implements OnInit {
 
   public error: string = "";
   public offset: number = 0;
+  public fromTrainerPage: boolean = false;
+  public username: string = localStorage.getItem("username") || "";
   public trainer: Trainer = {
     id: 1,
     username: "ash",
-    pokemon: ["bulbasaur", "kakuna", "rattata", "toxapex", "nidorina"],
+    pokemon: [],
   };
+
+
+  public getTrainer(username: string): void {
+    this.trainerService.fetchTrainer(username)
+      .subscribe({
+        next: (trainerResponse) => {
+          const userArray = trainerResponse as Array<Object>
+          this.trainer = userArray[0] as Trainer;
+        }
+      })
+  }
 
   constructor(private pokemonService: PokemonService, private trainerService: TrainerService) {}
 
@@ -47,6 +60,7 @@ export class CatalogPage implements OnInit {
   };
 
   ngOnInit(): void {
+    this.getTrainer(this.username)
     this.pokemonService.fetchPokemon();
   }
 

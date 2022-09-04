@@ -16,11 +16,25 @@ export class TrainerPage implements OnInit {
 
   constructor(private pokemonService: PokemonService, private trainerService: TrainerService) {}
 
+  public username: string = localStorage.getItem("username") || "";
+  
+  public fromTrainerPage: boolean = true;
   public trainer: Trainer = {
     id: 1,
-    username: "ash",
-    pokemon: ["bulbasaur", "kakuna", "rattata", "toxapex"],
+    username: "",
+    pokemon: [],
   };
+
+  public getTrainer(username: string): void {
+    this.trainerService.fetchTrainer(username)
+      .subscribe({
+        next: (trainerResponse) => {
+          const userArray = trainerResponse as Array<Object>
+          this.trainer = userArray[0] as Trainer;
+        }
+      })
+  }
+  
 
   getCaughtPokemon(pokemon: Pokemon[], trainer: Trainer): Pokemon[] {
     return pokemon.filter((poke) => {
@@ -28,7 +42,7 @@ export class TrainerPage implements OnInit {
     });
   };
 
-  get pokemon(): Pokemon[] {
+  get pokemon(): Pokemon[] {    
     return this.getCaughtPokemon(this.pokemonService.pokemon, this.trainer);
   }
 
@@ -39,6 +53,8 @@ export class TrainerPage implements OnInit {
 
   ngOnInit(): void {
     this.pokemonService.fetchPokemon();
+    this.getTrainer(this.username);
+    
   }
 }
 
